@@ -27,6 +27,8 @@ class Warrior
   def act!
     if feel.enemy?
       attack!
+    elsif feel.captive?
+      rescue!
     else
       if health < MAX_HEALTH and not under_attack?
         rest!
