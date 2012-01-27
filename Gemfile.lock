@@ -7,4 +7,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rubywarrior
+  rubywarrior (~> 0.1.2)
