@@ -4,9 +4,13 @@ This is my warrior for Ryan Bates' game [ruby-warrior](https://github.com/ryanb/
 
 ## Installation
 
-    git clone https://github.com/Koronen/ruby-warrior.git
-    cd ruby-warrior
+    export RUBYWARRIOR_NAME="james"
+    export RUBYWARRIOR_DIFFICULTY="beginner"
+    mkdir ruby-warrior
+    git clone https://github.com/Koronen/ruby-warrior.git ruby-warrior/$RUBYWARRIOR_NAME-$RUBYWARRIOR_DIFFICULTY
+    cd ruby-warrior/$RUBYWARRIOR_NAME-$RUBYWARRIOR_DIFFICULTY
     bundle install
+    rake install
 
 ## Usage
 
