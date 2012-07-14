@@ -1,15 +1,14 @@
-require "rspec/core/rake_task"
-require "cucumber/rake/task"
+require 'rake/testtask'
 
-RSpec::Core::RakeTask.new(:spec)
-Cucumber::Rake::Task.new(:features)
-
-task :test => [:spec, :features]
+Rake::TestTask.new(:spec) do |t|
+  t.libs << 'spec'
+  t.test_files = FileList['spec/**/*_spec.rb']
+end
 
 desc "Fight!"
 task :fight do
-  require "ruby_warrior"
+  require 'ruby_warrior'
   RubyWarrior::Runner.new(%w[-s -t 0], STDIN, STDOUT).run
 end
 
-task :default => :fight
+task default: :fight
