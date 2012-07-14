@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+(
+  cd `dirname $0`/..;
+  bundle exec irb -I".:lib" -r"rubygems" -r"bundler/setup" -r "ruby_warrior" -r"player"
+)
